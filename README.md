@@ -1,15 +1,14 @@
 # QingshiluClassfier
-# 批量处理清实录条文标签的本地程序。可自定义关键词和标签类别。
-# 目录/文件,描述,关键依赖
-# main.py,程序的入口文件，负责初始化 QApplication 和主窗口。,widgets/main_window.py
-# ui_utils.py **UI继承**BaseTabWidget 为所有 Tab 提供了统一的 UI 加载机制，简化了 widgets/ 目录下文件的代码。
+批量处理清实录条文标签的本地程序。可自定义关键词和标签类别。
+目录/文件,描述,关键依赖
+main.py,程序的入口文件，负责初始化 QApplication 和主窗口。,widgets/main_window.py
+ui_utils.py **UI继承**BaseTabWidget 为所有 Tab 提供了统一的 UI 加载机制，简化了 widgets/ 目录下文件的代码。
 
-data/,数据存储目录。,
-├── classified_data.json,已分类的文本记录。,
-└── custom_keywords.json,用户自定义的关键词。,
+data/,数据存储目录。
+├── classified_data.json,已分类的文本记录。
+└── custom_keywords.json,用户自定义的关键词。
 
 resources/，界面图片
-
 
 services/,核心业务逻辑层。 包含所有数据处理、分析算法功能。
 ├── analysis_service.py,核心服务类 (QingShiluService)。 【文本处理的核心文件】负责分析、推荐算法。
