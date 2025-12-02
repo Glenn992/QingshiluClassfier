@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>750</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>清实录文本分类工具 v5.1 - 模块化管理版</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    /* 顶级窗口和中心 Widget 使用系统颜色 */
+    QMainWindow, QWidget#centralwidget {
+        /* 移除硬编码的 #C7EDCC，让其跟随系统 */
+        /* background-color: #C7EDCC; */
+    }
+    /* 标签页主体内容区域和标签应该跟随系统颜色 */
+    QTabWidget::pane { /* The tab widget frame */
+        border-top: 2px solid #C4C4C3;
+        /* 移除强制白色背景 */
+        /* background: white; */
+    }
+    QTabWidget QWidget {
+        /* 移除强制白色背景 */
+        /* background-color: white; */
+    }
+    /* 按钮基础样式可以保持不变 */
+    QPushButton {
+        border: 1px solid #777;
+        padding: 5px;
+        border-radius: 3px;
+    }
+   </string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_main">
+    <item>
+     <widget class="QLabel" name="heroLabel">
+      <property name="styleSheet">
+       <string notr="true">background-image: url('resources/translation-hero.jpg');
+background-repeat: no-repeat;
+background-position: center;
+color: white;
+padding: 20px;</string>
+      </property>
+      <property name="text">
+       <string>&lt;h1&gt;清实录智能分类系统&lt;/h1&gt;&lt;p&gt;《清实录》专属词库 · 智能分类推荐 · 批量高效处理 · BERT训练直用&lt;/p&gt;</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::TextFormat::RichText</enum>
+      </property>
+      <property name="sizePolicy" stdset="0">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget> <!-- 标签已修复：移除了多余的 </widget>，并在此处正确闭合 -->
+    </item>
+    <item>
+     <widget class="QTabWidget" name="mainTabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="sizePolicy" stdset="0">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>1</horstretch>
+        <verstretch>1</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_function">
+    <property name="title">
+     <string>功能</string>
+    </property>
+    <addaction name="actionGoToSingle"/>
+    <addaction name="actionGoToBatch"/>
+    <addaction name="actionGoToKeyword"/>
+    <addaction name="actionGoToStatistics"/>
+    <addaction name="actionGoToCategory"/>
+   </widget>
+   <addaction name="menu_function"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionGoToSingle">
+   <property name="text">
+    <string>单条文本处理</string>
+   </property>
+  </action>
+  <action name="actionGoToBatch">
+   <property name="text">
+    <string>批量处理</string>
+   </property>
+  </action>
+  <action name="actionGoToKeyword">
+   <property name="text">
+    <string>关键词管理</string>
+   </property>
+  </action>
+  <action name="actionGoToStatistics">
+   <property name="text">
+    <string>统计查看</string>
+   </property>
+  </action>
+  <action name="actionGoToCategory">
+   <property name="text">
+    <string>分类管理</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

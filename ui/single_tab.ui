@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SingleTabWidget</class>
+ <widget class="QWidget" name="SingleTabWidget">
+  <layout class="QVBoxLayout" name="verticalLayout_single">
+   <item>
+    <layout class="QHBoxLayout" name="inputResultLayout">
+     <item>
+      <layout class="QVBoxLayout" name="inputLayout">
+       <item>
+        <widget class="QLabel" name="inputLabel">
+         <property name="text">
+          <string>&lt;span style=&quot;font-size:18px;font-weight:bold;&quot;&gt;原文输入&lt;/span&gt;</string>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::TextFormat::RichText</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="originalTextEdit">
+         <property name="placeholderText">
+          <string>请在此输入《清实录》文言文条文...</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="inputButtonLayout">
+         <item>
+          <widget class="QLabel" name="charCountLabel">
+           <property name="text">
+            <string>0 字符</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="clearButton">
+           <property name="text">
+            <string>清空</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="analyzeButton">
+           <property name="styleSheet">
+            <string notr="true">background-color: #2d5a3e; color: white;</string>
+           </property>
+           <property name="text">
+            <string>智能分析</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="resultLayout">
+       <item>
+        <widget class="QLabel" name="resultLabel">
+         <property name="text">
+          <string>&lt;span style=&quot;font-size:18px;font-weight:bold;&quot;&gt;智能分析结果&lt;/span&gt;</string>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::TextFormat::RichText</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="translationTextEdit">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.AppleSystemUIFont'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic; color:#808080;&quot;&gt;点击&amp;quot;智能分析&amp;quot;按钮获取白话文翻译...&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="resultButtonLayout">
+         <item>
+          <widget class="QLabel" name="transCharCountLabel">
+           <property name="text">
+            <string>0 字符</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="copyButton">
+           <property name="text">
+            <string>复制译文</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="saveTranslationButton">
+           <property name="styleSheet">
+            <string notr="true">background-color: #1a3b2e; color: white;</string>
+           </property>
+           <property name="text">
+            <string>保存翻译</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="recommendationLayout">
+     <item>
+      <widget class="QLabel" name="recommendationLabel">
+       <property name="text">
+        <string>&lt;span style=&quot;font-size:18px;font-weight:bold;&quot;&gt;分类智能推荐&lt;/span&gt;</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::TextFormat::RichText</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QScrollArea" name="recommendationScrollArea">
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="recommendationContents">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1054</width>
+          <height>69</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="recommendationListLayout"/>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="classificationLayout">
+     <item>
+      <widget class="QLabel" name="classificationLabel">
+       <property name="text">
+        <string>&lt;span style=&quot;font-size:18px;font-weight:bold;&quot;&gt;三级分类选择&lt;/span&gt;</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::TextFormat::RichText</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="level1Layout">
+       <item>
+        <widget class="QPushButton" name="level1Btn0">
+         <property name="styleSheet">
+          <string notr="true">text-align: left; padding: 10px;</string>
+         </property>
+         <property name="text">
+          <string>&lt;span style=&quot;font-weight:bold;&quot;&gt;0 事务类&lt;/span&gt;&lt;br&gt;赈灾、军事、财政等正常事务</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="level1Btn1">
+         <property name="styleSheet">
+          <string notr="true">text-align: left; padding: 10px;</string>
+         </property>
+         <property name="text">
+          <string>&lt;span style=&quot;font-weight:bold;&quot;&gt;1 问题类&lt;/span&gt;&lt;br&gt;不确定、行政失职、腐败等问题</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QGridLayout" name="level2Layout"/>
+     </item>
+     <item>
+      <layout class="QGridLayout" name="level3Layout"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="classificationButtonLayout">
+       <item>
+        <widget class="QLabel" name="currentSelectionLabel">
+         <property name="text">
+          <string>当前选择：未选择</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="resetClassificationButton">
+         <property name="text">
+          <string>重置</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="saveClassificationButton">
+         <property name="styleSheet">
+          <string notr="true">background-color: #1a3b2e; color: white;</string>
+         </property>
+         <property name="text">
+          <string>保存分类</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

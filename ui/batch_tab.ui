@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BatchTabWidget</class>
+ <widget class="QWidget" name="BatchTabWidget">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1350</width>
+    <height>653</height>
+   </rect>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    /* 移除硬编码的 #FFFFF0，留待 Python 代码根据主题设置 */
+    QWidget#BatchTabWidget {
+        /* background-color: #FFFFF0; */
+    }
+    /* 确保 QScrollArea 的背景也是系统默认背景 */
+    QScrollArea {
+        /* background-color: #FFFFF0; */
+        border: none;
+    }
+   </string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_batch">
+   <property name="leftMargin">
+    <number>12</number>
+   </property>
+   <item>
+    <widget class="QPushButton" name="selectBatchFileButton">
+     <property name="text">
+      <string>选择批量文件</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QScrollArea" name="batchScrollArea">
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="batchContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1324</width>
+        <height>551</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* 移除硬编码的 #FFFFF0 */</string>
+      </property>
+      <layout class="QVBoxLayout" name="batchListLayout"/>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="batchButtonLayout">
+     <item>
+      <spacer name="horizontalSpacer_batch">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="processBatchButton">
+       <property name="styleSheet">
+        <string notr="true">background-color: #8b5a2b; color: white;</string>
+       </property>
+       <property name="text">
+        <string>批量分析</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="filterUnclassifiedButton">
+       <property name="styleSheet">
+        <string notr="true">background-color: #3f689f; color: white;</string>
+       </property>
+       <property name="text">
+        <string>筛选未分类</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="saveBatchButton">
+       <property name="styleSheet">
+        <string notr="true">background-color: #1a3b2e; color: white;</string>
+       </property>
+       <property name="text">
+        <string>保存结果</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="notificationLabel">
+     <property name="visible">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

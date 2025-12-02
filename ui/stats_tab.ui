@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StatsTabWidget</class>
+ <widget class="QWidget" name="StatsTabWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>946</width>
+    <height>628</height>
+   </rect>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QWidget#StatsTabWidget {
+        /* 移除硬编码的 #FFFFF0，留待 Python 代码根据主题设置 */
+        /* background-color: #FFFFF0; */
+    }
+    QLabel {
+        background-color: transparent;
+    }
+    QComboBox {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+   </string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_stats">
+   <item>
+    <widget class="QLabel" name="statsTitleLabel">
+     <property name="text">
+      <string>&lt;h2 style=&quot;color:#1a3b2e;&quot;&gt;已分类条文统计与导出&lt;/h2&gt;</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::TextFormat::RichText</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="filterExportLayout">
+     <item>
+      <widget class="QLabel" name="filterLabel">
+       <property name="text">
+        <string>筛选分类：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="level1ComboBox">
+       <property name="minimumSize">
+        <size>
+         <width>120</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="level2ComboBox">
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="level3ComboBox">
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="refreshButton">
+       <property name="text">
+        <string>刷新统计</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_filter">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="exportCsvButton">
+       <property name="styleSheet">
+        <string notr="true">background-color: #1a3b2e; color: white;</string>
+       </property>
+       <property name="text">
+        <string>导出当前结果 (CSV)</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTextBrowser" name="statsTextBrowser">
+     <property name="styleSheet">
+      <string notr="true">/* 移除硬编码的 #FFFFF0，留待 Python 代码根据主题设置 */
+      border: 1px solid #ccc; padding: 10px;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="notificationLabel">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="visible">
+      <bool>false</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

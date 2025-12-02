@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CategoryTabWidget</class>
+ <widget class="QWidget" name="CategoryTabWidget">
+  <layout class="QVBoxLayout" name="verticalLayout_category">
+   <item>
+    <widget class="QLabel" name="categoryLabel">
+     <property name="text">
+      <string>&lt;h2&gt;分类管理模块&lt;/h2&gt;&lt;p&gt;在此处实现三级分类体系的创建、修改和维护功能。&lt;/p&gt;&lt;p&gt;当前模块独立于主窗口逻辑，易于维护！&lt;/p&gt;</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::TextFormat::RichText</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_category">
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
